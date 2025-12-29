@@ -261,7 +261,467 @@ proportion = (count_fp+count_fn)/total
 #response directly and accurately answer the users' guide?
 #Precision, Groundedness.
 #score_groundedness and score_precision: 0.75, 0.6
+library(ggplot2)
+df1 <- read.csv("LCO_vis_start10.csv")
+df1$label <- ifelse(df1$label == 1, "Positive", "Negative")
+df1$battery_type = paste(df1$label, df1$battery_type, sep = "_")
+png("thresholding_sensitivity_windowlower_10_LCO.png", width = 600, height = 750)
+ggplot(df1, aes(x = threshold, y = value, color = factor(label))) +
+  geom_jitter(size = 2.5) +
+  scale_color_manual(values = c(
+    "Negative"="orange",
+    "Positive"="steelblue",
+    "Unknown"="firebrick" 
+    ),
+                     name = "Label") +
+  labs(
+    x = "Maximal Window Size",
+    y = "Maximal Detected Value",
+    title = "Maximal Detected Value vs. Threshold \n - Lower Window Size 10 LCO Battery"
+  ) +
+    geom_hline(yintercept = 0.3, color = "brown", linewidth = 1.5) + 
+     theme(plot.title = element_text(size = 22)) + 
+   theme(axis.text = element_text(size = 20)) + 
+   theme(axis.title = element_text(size = 20)) + 
+   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) + 
+  theme(legend.position='bottom') + 
+  theme(legend.title = element_text(size = 20), 
+        legend.text = element_text(size = 20)) + 
+    theme(legend.title = element_blank()) +   
+  theme(legend.key.size = unit(1, 'cm')) 
+dev.off()
 
+
+library(ggplot2)
+df1 <- read.csv("LFP_vis_start10.csv")
+df1$label <- ifelse(df1$label == 1, "Positive", "Negative")
+df1$battery_type = paste(df1$label, df1$battery_type, sep = "_")
+png("thresholding_sensitivity_windowlower_10_LFP.png", width = 600, height = 750)
+ggplot(df1, aes(x = threshold, y = value, color = factor(label))) +
+  geom_jitter(size = 2.5) +
+  scale_color_manual(values = c(
+    "Negative"="orange",
+    "Positive"="steelblue",
+    "Unknown"="firebrick" 
+    ),
+                     name = "Label") +
+  labs(
+    x = "Maximal Window Size",
+    y = "Maximal Detected Value",
+    title = "Maximal Detected Value vs. Threshold \n - Lower Window Size 10 LFP Battery"
+  ) +
+    geom_hline(yintercept = 0.3, color = "brown", linewidth = 1.5) + 
+     theme(plot.title = element_text(size = 22)) + 
+   theme(axis.text = element_text(size = 20)) + 
+   theme(axis.title = element_text(size = 20)) + 
+   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) + 
+  theme(legend.position='bottom') + 
+  theme(legend.title = element_text(size = 20), 
+        legend.text = element_text(size = 20)) + 
+    theme(legend.title = element_blank()) +   
+  theme(legend.key.size = unit(1, 'cm')) 
+dev.off()
+
+
+library(ggplot2)
+df1 <- read.csv("Rec_vis_start10.csv")
+df1$label <- ifelse(df1$label == 1, "Positive", "Negative")
+df1$battery_type = paste(df1$label, df1$battery_type, sep = "_")
+png("thresholding_sensitivity_windowlower_10_Rec.png", width = 600, height = 750)
+ggplot(df1, aes(x = threshold, y = value, color = factor(label))) +
+  geom_jitter(size = 2.5) +
+  scale_color_manual(values = c(
+    "Negative"="orange",
+    "Positive"="steelblue",
+    "Unknown"="firebrick" 
+    ),
+                     name = "Label") +
+  labs(
+    x = "Maximal Window Size",
+    y = "Maximal Detected Value",
+    title = "Maximal Detected Value vs. Threshold \n - Lower Window Size 10 Rec Battery"
+  ) +
+    geom_hline(yintercept = 0.3, color = "brown", linewidth = 1.5) + 
+     theme(plot.title = element_text(size = 22)) + 
+   theme(axis.text = element_text(size = 20)) + 
+   theme(axis.title = element_text(size = 20)) + 
+   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) + 
+  theme(legend.position='bottom') + 
+  theme(legend.title = element_text(size = 20), 
+        legend.text = element_text(size = 20)) + 
+    theme(legend.title = element_blank()) +   
+  theme(legend.key.size = unit(1, 'cm')) 
+dev.off()
+
+
+library(ggplot2)
+df1 <- read.csv("SO_vis_start10.csv")
+df1$label <- ifelse(df1$label == 1, "Positive", "Negative")
+df1$battery_type = paste(df1$label, df1$battery_type, sep = "_")
+png("thresholding_sensitivity_windowlower_10_SO.png", width = 600, height = 750)
+ggplot(df1, aes(x = threshold, y = value, color = factor(label))) +
+  geom_jitter(size = 2.5) +
+  scale_color_manual(values = c(
+    "Negative"="orange",
+    "Positive"="steelblue",
+    "Unknown"="firebrick" 
+    ),
+                     name = "Label") +
+  labs(
+    x = "Maximal Window Size",
+    y = "Maximal Detected Value",
+    title = "Maximal Detected Value vs. Threshold \n - Lower Window Size 10 SO Battery"
+  ) +
+    geom_hline(yintercept = 0.3, color = "brown", linewidth = 1.5) + 
+     theme(plot.title = element_text(size = 22)) + 
+   theme(axis.text = element_text(size = 20)) + 
+   theme(axis.title = element_text(size = 20)) + 
+   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) + 
+  theme(legend.position='bottom') + 
+  theme(legend.title = element_text(size = 20), 
+        legend.text = element_text(size = 20)) + 
+    theme(legend.title = element_blank()) +   
+  theme(legend.key.size = unit(1, 'cm')) 
+dev.off()
+
+
+library(ggplot2)
+df1 <- read.csv("NMC_vis_start10.csv")
+df1$label <- ifelse(df1$label == 1, "Positive", "Negative")
+df1$battery_type = paste(df1$label, df1$battery_type, sep = "_")
+png("thresholding_sensitivity_windowlower_10_NMC.png", width = 600, height = 750)
+ggplot(df1, aes(x = threshold, y = value, color = factor(label))) +
+  geom_jitter(size = 2.5) +
+  scale_color_manual(values = c(
+    "Negative"="orange",
+    "Positive"="steelblue",
+    "Unknown"="firebrick" 
+    ),
+                     name = "Label") +
+  labs(
+    x = "Maximal Window Size",
+    y = "Maximal Detected Value",
+    title = "Maximal Detected Value vs. Threshold \n - Lower Window Size 10 NMC Battery"
+  ) +
+    geom_hline(yintercept = 0.3, color = "brown", linewidth = 1.5) + 
+     theme(plot.title = element_text(size = 22)) + 
+   theme(axis.text = element_text(size = 20)) + 
+   theme(axis.title = element_text(size = 20)) + 
+   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) + 
+  theme(legend.position='bottom') + 
+  theme(legend.title = element_text(size = 20), 
+        legend.text = element_text(size = 20)) + 
+    theme(legend.title = element_blank()) +   
+  theme(legend.key.size = unit(1, 'cm')) 
+dev.off()
+
+
+df1 <- read.csv("LCO_vis_start30.csv")
+df1$label <- ifelse(df1$label == 1, "Positive", "Negative")
+df1$battery_type = paste(df1$label, df1$battery_type, sep = "_")
+png("thresholding_sensitivity_windowlower_30_LCO.png", width = 600, height = 750)
+ggplot(df1, aes(x = threshold, y = value, color = factor(label))) +
+  geom_jitter(size = 2.5) +
+  scale_color_manual(values = c(
+    "Negative"="orange",
+    "Positive"="steelblue",
+    "Unknown"="firebrick" 
+    ),
+                     name = "Label") +
+  labs(
+    x = "Maximal Window Size",
+    y = "Maximal Detected Value",
+    title = "Maximal Detected Value vs. Threshold \n - Lower Window Size 30 LCO Battery"
+  ) +
+    geom_hline(yintercept = 0.3, color = "brown", linewidth = 1.5) + 
+     theme(plot.title = element_text(size = 22)) + 
+   theme(axis.text = element_text(size = 20)) + 
+   theme(axis.title = element_text(size = 20)) + 
+   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) + 
+  theme(legend.position='bottom') + 
+  theme(legend.title = element_text(size = 20), 
+        legend.text = element_text(size = 20)) + 
+    theme(legend.title = element_blank()) +   
+  theme(legend.key.size = unit(1, 'cm')) 
+dev.off()
+
+
+library(ggplot2)
+df1 <- read.csv("LFP_vis_start30.csv")
+df1$label <- ifelse(df1$label == 1, "Positive", "Negative")
+df1$battery_type = paste(df1$label, df1$battery_type, sep = "_")
+png("thresholding_sensitivity_windowlower_30_LFP.png", width = 600, height = 750)
+ggplot(df1, aes(x = threshold, y = value, color = factor(label))) +
+  geom_jitter(size = 2.5) +
+  scale_color_manual(values = c(
+    "Negative"="orange",
+    "Positive"="steelblue",
+    "Unknown"="firebrick" 
+    ),
+                     name = "Label") +
+  labs(
+    x = "Maximal Window Size",
+    y = "Maximal Detected Value",
+    title = "Maximal Detected Value vs. Threshold \n - Lower Window Size 30 LFP Battery"
+  ) +
+    geom_hline(yintercept = 0.3, color = "brown", linewidth = 1.5) + 
+     theme(plot.title = element_text(size = 22)) + 
+   theme(axis.text = element_text(size = 20)) + 
+   theme(axis.title = element_text(size = 20)) + 
+   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) + 
+  theme(legend.position='bottom') + 
+  theme(legend.title = element_text(size = 20), 
+        legend.text = element_text(size = 20)) + 
+    theme(legend.title = element_blank()) +   
+  theme(legend.key.size = unit(1, 'cm')) 
+dev.off()
+
+
+library(ggplot2)
+df1 <- read.csv("Rec_vis_start30.csv")
+df1$label <- ifelse(df1$label == 1, "Positive", "Negative")
+df1$battery_type = paste(df1$label, df1$battery_type, sep = "_")
+png("thresholding_sensitivity_windowlower_30_Rec.png", width = 600, height = 750)
+ggplot(df1, aes(x = threshold, y = value, color = factor(label))) +
+  geom_jitter(size = 2.5) +
+  scale_color_manual(values = c(
+    "Negative"="orange",
+    "Positive"="steelblue",
+    "Unknown"="firebrick" 
+    ),
+                     name = "Label") +
+  labs(
+    x = "Maximal Window Size",
+    y = "Maximal Detected Value",
+    title = "Maximal Detected Value vs. Threshold \n - Lower Window Size 30 Rec Battery"
+  ) +
+    geom_hline(yintercept = 0.3, color = "brown", linewidth = 1.5) + 
+     theme(plot.title = element_text(size = 22)) + 
+   theme(axis.text = element_text(size = 20)) + 
+   theme(axis.title = element_text(size = 20)) + 
+   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) + 
+  theme(legend.position='bottom') + 
+  theme(legend.title = element_text(size = 20), 
+        legend.text = element_text(size = 20)) + 
+    theme(legend.title = element_blank()) +   
+  theme(legend.key.size = unit(1, 'cm')) 
+dev.off()
+
+
+library(ggplot2)
+df1 <- read.csv("SO_vis_start30.csv")
+df1$label <- ifelse(df1$label == 1, "Positive", "Negative")
+df1$battery_type = paste(df1$label, df1$battery_type, sep = "_")
+png("thresholding_sensitivity_windowlower_30_SO.png", width = 600, height = 750)
+ggplot(df1, aes(x = threshold, y = value, color = factor(label))) +
+  geom_jitter(size = 2.5) +
+  scale_color_manual(values = c(
+    "Negative"="orange",
+    "Positive"="steelblue",
+    "Unknown"="firebrick" 
+    ),
+                     name = "Label") +
+  labs(
+    x = "Maximal Window Size",
+    y = "Maximal Detected Value",
+    title = "Maximal Detected Value vs. Threshold \n - Lower Window Size 30 SO Battery"
+  ) +
+    geom_hline(yintercept = 0.3, color = "brown", linewidth = 1.5) + 
+     theme(plot.title = element_text(size = 22)) + 
+   theme(axis.text = element_text(size = 20)) + 
+   theme(axis.title = element_text(size = 20)) + 
+   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) + 
+  theme(legend.position='bottom') + 
+  theme(legend.title = element_text(size = 20), 
+        legend.text = element_text(size = 20)) + 
+    theme(legend.title = element_blank()) +   
+  theme(legend.key.size = unit(1, 'cm')) 
+dev.off()
+
+
+library(ggplot2)
+df1 <- read.csv("NMC_vis_start40.csv")
+df1$label <- ifelse(df1$label == 1, "Positive", "Negative")
+df1$battery_type = paste(df1$label, df1$battery_type, sep = "_")
+png("thresholding_sensitivity_windowlower_40_NMC.png", width = 600, height = 750)
+ggplot(df1, aes(x = threshold, y = value, color = factor(label))) +
+  geom_jitter(size = 2.5) +
+  scale_color_manual(values = c(
+    "Negative"="orange",
+    "Positive"="steelblue",
+    "Unknown"="firebrick" 
+    ),
+                     name = "Label") +
+  labs(
+    x = "Maximal Window Size",
+    y = "Maximal Detected Value",
+    title = "Maximal Detected Value vs. Threshold \n - Lower Window Size 40 NMC Battery"
+  ) +
+    geom_hline(yintercept = 0.3, color = "brown", linewidth = 1.5) + 
+     theme(plot.title = element_text(size = 22)) + 
+   theme(axis.text = element_text(size = 20)) + 
+   theme(axis.title = element_text(size = 20)) + 
+   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) + 
+  theme(legend.position='bottom') + 
+  theme(legend.title = element_text(size = 20), 
+        legend.text = element_text(size = 20)) + 
+    theme(legend.title = element_blank()) +   
+  theme(legend.key.size = unit(1, 'cm')) 
+dev.off()
+
+
+df1 <- read.csv("LCO_vis_start40.csv")
+df1$label <- ifelse(df1$label == 1, "Positive", "Negative")
+df1$battery_type = paste(df1$label, df1$battery_type, sep = "_")
+png("thresholding_sensitivity_windowlower_40_LCO.png", width = 600, height = 750)
+ggplot(df1, aes(x = threshold, y = value, color = factor(label))) +
+  geom_jitter(size = 2.5) +
+  scale_color_manual(values = c(
+    "0"="orange",
+    "1"="steelblue",
+    "2"="firebrick" 
+    ),
+                     name = "Label") +
+  labs(
+    x = "Maximal Window Size",
+    y = "Maximal Detected Value",
+    title = "Maximal Detected Value vs. Threshold \n - Lower Window Size 40 LCO Battery"
+  ) +
+    geom_hline(yintercept = 0.3, color = "brown", linewidth = 1.5) + 
+     theme(plot.title = element_text(size = 22)) + 
+   theme(axis.text = element_text(size = 20)) + 
+   theme(axis.title = element_text(size = 20)) + 
+   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) + 
+  theme(legend.position='bottom') + 
+  theme(legend.title = element_text(size = 20), 
+        legend.text = element_text(size = 20)) + 
+    theme(legend.title = element_blank()) +   
+  theme(legend.key.size = unit(1, 'cm')) 
+dev.off()
+
+
+library(ggplot2)
+df1 <- read.csv("LFP_vis_start40.csv")
+df1$label <- ifelse(df1$label == 1, "Positive", "Negative")
+df1$battery_type = paste(df1$label, df1$battery_type, sep = "_")
+png("thresholding_sensitivity_windowlower_40_LFP.png", width = 600, height = 750)
+ggplot(df1, aes(x = threshold, y = value, color = factor(label))) +
+  geom_jitter(size = 2.5) +
+  scale_color_manual(values = c(
+    "Negative"="orange",
+    "Positive"="steelblue",
+    "Unknown"="firebrick" 
+    ),
+                     name = "Label") +
+  labs(
+    x = "Maximal Window Size",
+    y = "Maximal Detected Value",
+    title = "Maximal Detected Value vs. Threshold \n - Lower Window Size 40 LFP Battery"
+  ) +
+    geom_hline(yintercept = 0.3, color = "brown", linewidth = 1.5) + 
+     theme(plot.title = element_text(size = 22)) + 
+   theme(axis.text = element_text(size = 20)) + 
+   theme(axis.title = element_text(size = 20)) + 
+   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) + 
+  theme(legend.position='bottom') + 
+  theme(legend.title = element_text(size = 20), 
+        legend.text = element_text(size = 20)) + 
+    theme(legend.title = element_blank()) +   
+  theme(legend.key.size = unit(1, 'cm')) 
+dev.off()
+
+
+library(ggplot2)
+df1 <- read.csv("Rec_vis_start40.csv")
+df1$label <- ifelse(df1$label == 1, "Positive", "Negative")
+df1$battery_type = paste(df1$label, df1$battery_type, sep = "_")
+png("thresholding_sensitivity_windowlower_40_Rec.png", width = 600, height = 750)
+ggplot(df1, aes(x = threshold, y = value, color = factor(label))) +
+  geom_jitter(size = 2.5) +
+  scale_color_manual(values = c(
+    "Negative"="orange",
+    "Positive"="steelblue",
+    "Unknown"="firebrick" 
+    ),
+                     name = "Label") +
+  labs(
+    x = "Maximal Window Size",
+    y = "Maximal Detected Value",
+    title = "Maximal Detected Value vs. Threshold \n - Lower Window Size 40 Rec Battery"
+  ) +
+    geom_hline(yintercept = 0.3, color = "brown", linewidth = 1.5) + 
+     theme(plot.title = element_text(size = 22)) + 
+   theme(axis.text = element_text(size = 20)) + 
+   theme(axis.title = element_text(size = 20)) + 
+   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) + 
+  theme(legend.position='bottom') + 
+  theme(legend.title = element_text(size = 20), 
+        legend.text = element_text(size = 20)) + 
+    theme(legend.title = element_blank()) +   
+  theme(legend.key.size = unit(1, 'cm')) 
+dev.off()
+
+
+library(ggplot2)
+df1 <- read.csv("SO_vis_start40.csv")
+df1$label <- ifelse(df1$label == 1, "Positive", "Negative")
+df1$battery_type = paste(df1$label, df1$battery_type, sep = "_")
+png("thresholding_sensitivity_windowlower_40_SO.png", width = 600, height = 750)
+ggplot(df1, aes(x = threshold, y = value, color = factor(label))) +
+  geom_jitter(size = 2.5) +
+  scale_color_manual(values = c(
+    "Negative"="orange",
+    "Positive"="steelblue",
+    "Unknown"="firebrick" 
+    ),
+                     name = "Label") +
+  labs(
+    x = "Maximal Window Size",
+    y = "Maximal Detected Value",
+    title = "Maximal Detected Value vs. Threshold \n - Lower Window Size 40 SO Battery"
+  ) +
+    geom_hline(yintercept = 0.3, color = "brown", linewidth = 1.5) + 
+     theme(plot.title = element_text(size = 22)) + 
+   theme(axis.text = element_text(size = 20)) + 
+   theme(axis.title = element_text(size = 20)) + 
+   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) + 
+  theme(legend.position='bottom') + 
+  theme(legend.title = element_text(size = 20), 
+        legend.text = element_text(size = 20)) + 
+    theme(legend.title = element_blank()) +   
+  theme(legend.key.size = unit(1, 'cm')) 
+dev.off()
+
+
+library(ggplot2)
+df1 <- read.csv("NMC_vis_start40.csv")
+df1$label <- ifelse(df1$label == 1, "Positive", "Negative")
+df1$battery_type = paste(df1$label, df1$battery_type, sep = "_")
+png("thresholding_sensitivity_windowlower_40_NMC.png", width = 600, height = 750)
+ggplot(df1, aes(x = threshold, y = value, color = factor(label))) +
+  geom_jitter(size = 2.5) +
+  scale_color_manual(values = c(
+    "Negative"="orange",
+    "Positive"="steelblue",
+    "Unknown"="firebrick" 
+    ),
+                     name = "Label") +
+  labs(
+    x = "Maximal Window Size",
+    y = "Maximal Detected Value",
+    title = "Maximal Detected Value vs. Threshold \n - Lower Window Size 40 NMC Battery"
+  ) +
+    geom_hline(yintercept = 0.3, color = "brown", linewidth = 1.5) + 
+     theme(plot.title = element_text(size = 22)) + 
+   theme(axis.text = element_text(size = 20)) + 
+   theme(axis.title = element_text(size = 20)) + 
+   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) + 
+  theme(legend.position='bottom') + 
+  theme(legend.title = element_text(size = 20), 
+        legend.text = element_text(size = 20)) + 
+    theme(legend.title = element_blank()) +   
+  theme(legend.key.size = unit(1, 'cm')) 
+dev.off()
 
 
 
@@ -562,6 +1022,7 @@ df_rec_10$value[(n_rec+1):(2*n_rec)] <- df_svd[df_svd$battery == "Rec",]$'X10_75
 df_rec_10$value[(2*n_rec+1):(3*n_rec)] <- df_svd[df_svd$battery == "Rec",]$'X10_100'
 df_rec_10$value[(3*n_rec+1):(4*n_rec)] <- df_svd[df_svd$battery == "Rec",]$'X10_125'
 df_rec_10$value[(4*n_rec+1):(5*n_rec)] <- df_svd[df_svd$battery == "Rec",]$'X10_150'
+df_rec_10$label <- ifelse(df_rec_10$label == 1, "Positive", ifelse(df_rec_10$label == 2, "Unknown", "Negative"))
 
 
 df_svd <- read.csv("battery_cell_SVD_whole_stats.csv")
@@ -578,6 +1039,7 @@ df_lfp_10$value[(n_rec+1):(2*n_rec)] <- df_svd[df_svd$battery == "LFP",]$'X10_75
 df_lfp_10$value[(2*n_rec+1):(3*n_rec)] <- df_svd[df_svd$battery == "LFP",]$'X10_100'
 df_lfp_10$value[(3*n_rec+1):(4*n_rec)] <- df_svd[df_svd$battery == "LFP",]$'X10_125'
 df_lfp_10$value[(4*n_rec+1):(5*n_rec)] <- df_svd[df_svd$battery == "LFP",]$'X10_150'
+df_lfp_10$label <- ifelse(df_lfp_10$label == 1, "Positive", ifelse(df_lfp_10$label == 2, "Unknown", "Negative"))
 
 df_svd <- read.csv("battery_cell_SVD_whole_stats.csv")
 n_rec <- nrow(df_svd[df_svd$battery == "LCO",])
@@ -593,6 +1055,7 @@ df_lco_10$value[(n_rec+1):(2*n_rec)] <- df_svd[df_svd$battery == "LCO",]$'X10_75
 df_lco_10$value[(2*n_rec+1):(3*n_rec)] <- df_svd[df_svd$battery == "LCO",]$'X10_100'
 df_lco_10$value[(3*n_rec+1):(4*n_rec)] <- df_svd[df_svd$battery == "LCO",]$'X10_125'
 df_lco_10$value[(4*n_rec+1):(5*n_rec)] <- df_svd[df_svd$battery == "LCO",]$'X10_150'
+df_lco_10$label <- ifelse(df_lco_10$label == 1, "Positive", ifelse(df_lco_10$label == 2, "Unknown", "Negative"))
 
 
 df_svd <- read.csv("battery_cell_SVD_whole_stats.csv")
@@ -609,6 +1072,7 @@ df_nmc_10$value[(n_rec+1):(2*n_rec)] <- df_svd[df_svd$battery == "NMC",]$'X10_75
 df_nmc_10$value[(2*n_rec+1):(3*n_rec)] <- df_svd[df_svd$battery == "NMC",]$'X10_100'
 df_nmc_10$value[(3*n_rec+1):(4*n_rec)] <- df_svd[df_svd$battery == "NMC",]$'X10_125'
 df_nmc_10$value[(4*n_rec+1):(5*n_rec)] <- df_svd[df_svd$battery == "NMC",]$'X10_150'
+df_nmc_10$label <- ifelse(df_nmc_10$label == 1, "Positive", ifelse(df_nmc_10$label == 2, "Unknown", "Negative"))
 
 
 df_svd <- read.csv("battery_cell_SVD_whole_stats.csv")
@@ -625,15 +1089,16 @@ df_so_10$value[(n_rec+1):(2*n_rec)] <- df_svd[df_svd$battery == "SO",]$'X10_75'
 df_so_10$value[(2*n_rec+1):(3*n_rec)] <- df_svd[df_svd$battery == "SO",]$'X10_100'
 df_so_10$value[(3*n_rec+1):(4*n_rec)] <- df_svd[df_svd$battery == "SO",]$'X10_125'
 df_so_10$value[(4*n_rec+1):(5*n_rec)] <- df_svd[df_svd$battery == "SO",]$'X10_150'
+df_so_10$label <- ifelse(df_so_10$label == 1, "Positive", ifelse(df_so_10$label == 2, "Unknown", "Negative"))
 
 library(ggplot2)
 png("thresholding_sensitivity_windowlower_10_SO_SVD.png", width = 600, height = 750)
 ggplot(df_so_10, aes(x = threshold, y = value, color = factor(label))) +
   geom_jitter(size = 2.5) +
   scale_color_manual(values = c(
-    "0"="orange",
-    "1"="steelblue",
-    "2"="firebrick" 
+    "Negative"="orange",
+    "Positive"="steelblue",
+    "Unknown"="firebrick" 
     ),
                      name = "Label") +
   labs(
@@ -657,9 +1122,9 @@ png("thresholding_sensitivity_windowlower_10_NMC_SVD.png", width = 600, height =
 ggplot(df_nmc_10, aes(x = threshold, y = value, color = factor(label))) +
   geom_jitter(size = 2.5) +
   scale_color_manual(values = c(
-    "0"="orange",
-    "1"="steelblue",
-    "2"="firebrick" 
+    "Negative"="orange",
+    "Positive"="steelblue",
+    "Unknown"="firebrick" 
     ),
                      name = "Label") +
   labs(
@@ -684,9 +1149,9 @@ png("thresholding_sensitivity_windowlower_10_LCO_SVD.png", width = 600, height =
 ggplot(df_lco_10, aes(x = threshold, y = value, color = factor(label))) +
   geom_jitter(size = 2.5) +
   scale_color_manual(values = c(
-    "0"="orange",
-    "1"="steelblue",
-    "2"="firebrick" 
+    "Negative"="orange",
+    "Positive"="steelblue",
+    "Unknown"="firebrick" 
     ),
                      name = "Label") +
   labs(
@@ -711,9 +1176,9 @@ png("thresholding_sensitivity_windowlower_10_Rec_SVD.png", width = 600, height =
 ggplot(df_rec_10, aes(x = threshold, y = value, color = factor(label))) +
   geom_jitter(size = 2.5) +
   scale_color_manual(values = c(
-    "0"="orange",
-    "1"="steelblue",
-    "2"="firebrick" 
+    "Negative"="orange",
+    "Positive"="steelblue",
+    "Unknown"="firebrick" 
     ),
                      name = "Label") +
   labs(
@@ -737,9 +1202,9 @@ png("thresholding_sensitivity_windowlower_10_LFP_SVD.png", width = 600, height =
 ggplot(df_lfp_10, aes(x = threshold, y = value, color = factor(label))) +
   geom_jitter(size = 2.5) +
   scale_color_manual(values = c(
-    "0"="orange",
-    "1"="steelblue",
-    "2"="firebrick" 
+    "Negative"="orange",
+    "Positive"="steelblue",
+    "Unknown"="firebrick" 
     ),
                      name = "Label") +
   labs(
@@ -777,6 +1242,7 @@ df_rec_30$value[(n_rec+1):(2*n_rec)] <- df_svd[df_svd$battery == "Rec",]$'X30_75
 df_rec_30$value[(2*n_rec+1):(3*n_rec)] <- df_svd[df_svd$battery == "Rec",]$'X30_100'
 df_rec_30$value[(3*n_rec+1):(4*n_rec)] <- df_svd[df_svd$battery == "Rec",]$'X30_125'
 df_rec_30$value[(4*n_rec+1):(5*n_rec)] <- df_svd[df_svd$battery == "Rec",]$'X30_150'
+df_rec_30$label <- ifelse(df_rec_30$label == 1, "Positive", ifelse(df_rec_30$label == 2, "Unknown", "Negative"))
 
 
 df_svd <- read.csv("battery_cell_SVD_whole_stats.csv")
@@ -793,6 +1259,7 @@ df_lfp_30$value[(n_rec+1):(2*n_rec)] <- df_svd[df_svd$battery == "LFP",]$'X30_75
 df_lfp_30$value[(2*n_rec+1):(3*n_rec)] <- df_svd[df_svd$battery == "LFP",]$'X30_100'
 df_lfp_30$value[(3*n_rec+1):(4*n_rec)] <- df_svd[df_svd$battery == "LFP",]$'X30_125'
 df_lfp_30$value[(4*n_rec+1):(5*n_rec)] <- df_svd[df_svd$battery == "LFP",]$'X30_150'
+df_lfp_30$label <- ifelse(df_lfp_30$label == 1, "Positive", ifelse(df_lfp_30$label == 2, "Unknown", "Negative"))
 
 df_svd <- read.csv("battery_cell_SVD_whole_stats.csv")
 n_rec <- nrow(df_svd[df_svd$battery == "LCO",])
@@ -808,6 +1275,7 @@ df_lco_30$value[(n_rec+1):(2*n_rec)] <- df_svd[df_svd$battery == "LCO",]$'X30_75
 df_lco_30$value[(2*n_rec+1):(3*n_rec)] <- df_svd[df_svd$battery == "LCO",]$'X30_100'
 df_lco_30$value[(3*n_rec+1):(4*n_rec)] <- df_svd[df_svd$battery == "LCO",]$'X30_125'
 df_lco_30$value[(4*n_rec+1):(5*n_rec)] <- df_svd[df_svd$battery == "LCO",]$'X30_150'
+df_lco_30$label <- ifelse(df_lco_30$label == 1, "Positive", ifelse(df_lco_30$label == 2, "Unknown", "Negative"))
 
 
 df_svd <- read.csv("battery_cell_SVD_whole_stats.csv")
@@ -824,7 +1292,7 @@ df_nmc_30$value[(n_rec+1):(2*n_rec)] <- df_svd[df_svd$battery == "NMC",]$'X10_75
 df_nmc_30$value[(2*n_rec+1):(3*n_rec)] <- df_svd[df_svd$battery == "NMC",]$'X10_100'
 df_nmc_30$value[(3*n_rec+1):(4*n_rec)] <- df_svd[df_svd$battery == "NMC",]$'X10_125'
 df_nmc_30$value[(4*n_rec+1):(5*n_rec)] <- df_svd[df_svd$battery == "NMC",]$'X10_150'
-
+df_nmc_30$label <- ifelse(df_nmc_30$label == 1, "Positive", ifelse(df_nmc_30$label == 2, "Unknown", "Negative"))
 
 df_svd <- read.csv("battery_cell_SVD_whole_stats.csv")
 n_rec <- nrow(df_svd[df_svd$battery == "SO",])
@@ -840,15 +1308,17 @@ df_so_30$value[(n_rec+1):(2*n_rec)] <- df_svd[df_svd$battery == "SO",]$'X30_75'
 df_so_30$value[(2*n_rec+1):(3*n_rec)] <- df_svd[df_svd$battery == "SO",]$'X30_100'
 df_so_30$value[(3*n_rec+1):(4*n_rec)] <- df_svd[df_svd$battery == "SO",]$'X30_125'
 df_so_30$value[(4*n_rec+1):(5*n_rec)] <- df_svd[df_svd$battery == "SO",]$'X30_150'
+df_so_30$label <- ifelse(df_so_30$label == 1, "Positive", ifelse(df_so_30$label == 2, "Unknown", "Negative"))
+
 
 library(ggplot2)
 png("thresholding_sensitivity_windowlower_30_SO_SVD.png", width = 600, height = 750)
 ggplot(df_so_30, aes(x = threshold, y = value, color = factor(label))) +
   geom_jitter(size = 2.5) +
   scale_color_manual(values = c(
-    "0"="orange",
-    "1"="steelblue",
-    "2"="firebrick" 
+    "Negative"="orange",
+    "Positive"="steelblue",
+    "Unknown"="firebrick" 
     ),
                      name = "Label") +
   labs(
@@ -872,9 +1342,9 @@ png("thresholding_sensitivity_windowlower_30_NMC_SVD.png", width = 600, height =
 ggplot(df_nmc_30, aes(x = threshold, y = value, color = factor(label))) +
   geom_jitter(size = 2.5) +
   scale_color_manual(values = c(
-    "0"="orange",
-    "1"="steelblue",
-    "2"="firebrick" 
+    "Negative"="orange",
+    "Positive"="steelblue",
+    "Unknown"="firebrick" 
     ),
                      name = "Label") +
   labs(
@@ -899,9 +1369,9 @@ png("thresholding_sensitivity_windowlower_30_LCO_SVD.png", width = 600, height =
 ggplot(df_lco_30, aes(x = threshold, y = value, color = factor(label))) +
   geom_jitter(size = 2.5) +
   scale_color_manual(values = c(
-    "0"="orange",
-    "1"="steelblue",
-    "2"="firebrick" 
+    "Negative"="orange",
+    "Positive"="steelblue",
+    "Unknown"="firebrick" 
     ),
                      name = "Label") +
   labs(
@@ -926,9 +1396,9 @@ png("thresholding_sensitivity_windowlower_30_Rec_SVD.png", width = 600, height =
 ggplot(df_rec_30, aes(x = threshold, y = value, color = factor(label))) +
   geom_jitter(size = 2.5) +
   scale_color_manual(values = c(
-    "0"="orange",
-    "1"="steelblue",
-    "2"="firebrick" 
+    "Negative"="orange",
+    "Positive"="steelblue",
+    "Unknown"="firebrick" 
     ),
                      name = "Label") +
   labs(
@@ -953,9 +1423,9 @@ png("thresholding_sensitivity_windowlower_30_LFP_SVD.png", width = 600, height =
 ggplot(df_lfp_30, aes(x = threshold, y = value, color = factor(label))) +
   geom_jitter(size = 2.5) +
   scale_color_manual(values = c(
-    "0"="orange",
-    "1"="steelblue",
-    "2"="firebrick" 
+    "Negative"="orange",
+    "Positive"="steelblue",
+    "Unknown"="firebrick" 
     ),
                      name = "Label") +
   labs(
@@ -991,6 +1461,7 @@ df_rec_40$value[(n_rec+1):(2*n_rec)] <- df_svd[df_svd$battery == "Rec",]$'X40_75
 df_rec_40$value[(2*n_rec+1):(3*n_rec)] <- df_svd[df_svd$battery == "Rec",]$'X40_100'
 df_rec_40$value[(3*n_rec+1):(4*n_rec)] <- df_svd[df_svd$battery == "Rec",]$'X40_125'
 df_rec_40$value[(4*n_rec+1):(5*n_rec)] <- df_svd[df_svd$battery == "Rec",]$'X40_150'
+df_rec_40$label <- ifelse(df_rec_40$label == 1, "Positive", ifelse(df_rec_40$label == 2, "Unknown", "Negative"))
 
 
 df_svd <- read.csv("battery_cell_SVD_whole_stats.csv")
@@ -1007,6 +1478,8 @@ df_lfp_40$value[(n_rec+1):(2*n_rec)] <- df_svd[df_svd$battery == "LFP",]$'X40_75
 df_lfp_40$value[(2*n_rec+1):(3*n_rec)] <- df_svd[df_svd$battery == "LFP",]$'X40_100'
 df_lfp_40$value[(3*n_rec+1):(4*n_rec)] <- df_svd[df_svd$battery == "LFP",]$'X40_125'
 df_lfp_40$value[(4*n_rec+1):(5*n_rec)] <- df_svd[df_svd$battery == "LFP",]$'X40_150'
+df_lfp_40$label <- ifelse(df_lfp_40$label == 1, "Positive", ifelse(df_lfp_40$label == 2, "Unknown", "Negative"))
+
 
 df_svd <- read.csv("battery_cell_SVD_whole_stats.csv")
 n_rec <- nrow(df_svd[df_svd$battery == "LCO",])
@@ -1022,6 +1495,7 @@ df_lco_40$value[(n_rec+1):(2*n_rec)] <- df_svd[df_svd$battery == "LCO",]$'X40_75
 df_lco_40$value[(2*n_rec+1):(3*n_rec)] <- df_svd[df_svd$battery == "LCO",]$'X40_100'
 df_lco_40$value[(3*n_rec+1):(4*n_rec)] <- df_svd[df_svd$battery == "LCO",]$'X40_125'
 df_lco_40$value[(4*n_rec+1):(5*n_rec)] <- df_svd[df_svd$battery == "LCO",]$'X40_150'
+df_lco_40$label <- ifelse(df_lco_40$label == 1, "Positive", ifelse(df_lco_40$label == 2, "Unknown", "Negative"))
 
 
 df_svd <- read.csv("battery_cell_SVD_whole_stats.csv")
@@ -1038,6 +1512,7 @@ df_nmc_40$value[(n_rec+1):(2*n_rec)] <- df_svd[df_svd$battery == "NMC",]$'X40_75
 df_nmc_40$value[(2*n_rec+1):(3*n_rec)] <- df_svd[df_svd$battery == "NMC",]$'X40_100'
 df_nmc_40$value[(3*n_rec+1):(4*n_rec)] <- df_svd[df_svd$battery == "NMC",]$'X40_125'
 df_nmc_40$value[(4*n_rec+1):(5*n_rec)] <- df_svd[df_svd$battery == "NMC",]$'X40_150'
+df_nmc_40$label <- ifelse(df_nmc_40$label == 1, "Positive", ifelse(df_nmc_40$label == 2, "Unknown", "Negative"))
 
 
 df_svd <- read.csv("battery_cell_SVD_whole_stats.csv")
@@ -1054,15 +1529,15 @@ df_so_40$value[(n_rec+1):(2*n_rec)] <- df_svd[df_svd$battery == "SO",]$'X40_75'
 df_so_40$value[(2*n_rec+1):(3*n_rec)] <- df_svd[df_svd$battery == "SO",]$'X40_100'
 df_so_40$value[(3*n_rec+1):(4*n_rec)] <- df_svd[df_svd$battery == "SO",]$'X40_125'
 df_so_40$value[(4*n_rec+1):(5*n_rec)] <- df_svd[df_svd$battery == "SO",]$'X40_150'
-
+df_so_40$label <- ifelse(df_so_40$label == 1, "Positive", ifelse(df_so_40$label == 2, "Unknown", "Negative"))
 library(ggplot2)
 png("thresholding_sensitivity_windowlower_40_SO_SVD.png", width = 600, height = 750)
 ggplot(df_so_40, aes(x = threshold, y = value, color = factor(label))) +
   geom_jitter(size = 2.5) +
   scale_color_manual(values = c(
-    "0"="orange",
-    "1"="steelblue",
-    "2"="firebrick" 
+    "Negative"="orange",
+    "Positive"="steelblue",
+    "Unknown"="firebrick" 
     ),
                      name = "Label") +
   labs(
@@ -1086,9 +1561,9 @@ png("thresholding_sensitivity_windowlower_40_NMC_SVD.png", width = 600, height =
 ggplot(df_nmc_40, aes(x = threshold, y = value, color = factor(label))) +
   geom_jitter(size = 2.5) +
   scale_color_manual(values = c(
-    "0"="orange",
-    "1"="steelblue",
-    "2"="firebrick" 
+    "Negative"="orange",
+    "Positive"="steelblue",
+    "Unknown"="firebrick" 
     ),
                      name = "Label") +
   labs(
@@ -1113,9 +1588,9 @@ png("thresholding_sensitivity_windowlower_40_LCO_SVD.png", width = 600, height =
 ggplot(df_lco_40, aes(x = threshold, y = value, color = factor(label))) +
   geom_jitter(size = 2.5) +
   scale_color_manual(values = c(
-    "0"="orange",
-    "1"="steelblue",
-    "2"="firebrick" 
+    "Negative"="orange",
+    "Positive"="steelblue",
+    "Unknown"="firebrick" 
     ),
                      name = "Label") +
   labs(
@@ -1140,9 +1615,9 @@ png("thresholding_sensitivity_windowlower_40_Rec_SVD.png", width = 600, height =
 ggplot(df_rec_40, aes(x = threshold, y = value, color = factor(label))) +
   geom_jitter(size = 2.5) +
   scale_color_manual(values = c(
-    "0"="orange",
-    "1"="steelblue",
-    "2"="firebrick" 
+    "Negative"="orange",
+    "Positive"="steelblue",
+    "Unknown"="firebrick" 
     ),
                      name = "Label") +
   labs(
@@ -1167,9 +1642,9 @@ png("thresholding_sensitivity_windowlower_40_LFP_SVD.png", width = 600, height =
 ggplot(df_lfp_40, aes(x = threshold, y = value, color = factor(label))) +
   geom_jitter(size = 2.5) +
   scale_color_manual(values = c(
-    "0"="orange",
-    "1"="steelblue",
-    "2"="firebrick" 
+    "Negative"="orange",
+    "Positive"="steelblue",
+    "Unknown"="firebrick" 
     ),
                      name = "Label") +
   labs(
