@@ -1,4 +1,4 @@
-//Battery CCCV Short Circuit Simulation with varying
+//Battery CCCV Short Circuit Simulation with varying starting & end value for the Internal Short Circuit
 
 //start = 1e10, end = 0.002, 
 T = BatteryCCCVSimlog.Battery_Table_Based.cell_temperature.series.values;

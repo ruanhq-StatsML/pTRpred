@@ -1,5 +1,4 @@
-//
-//
+//Simulate the Battery Thermal Runaway via Short-Circuit, varying starting and end value. Data Extraction via Simulink
 
 //setting1: slope -10k, start time 20k, initial output 1e7
 T1 = BatteryCCCVSimlog.Battery_Table_Based.H.T.series.values;
