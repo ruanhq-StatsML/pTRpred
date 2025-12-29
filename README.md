@@ -20,9 +20,7 @@ If you do not need ARIMAX functionality, omit `arima`. If you do not need sparse
 
 ## Run tests
 
-One-Dimensional Data Procedure:
-
-SVD based Procedure:
+1. Raw Signal -> Real-Time Detector
 
 ``` bash
 # Reproducibility (R's set.seed(1))
@@ -59,10 +57,9 @@ fig, ax1, ax2 = plot_detection_overlay(
 )
 ```
 
-![](datasets/pTR_unittest.png)
+![](datasets/pTR_unittest1.png)
 
-Arima Based Auto-Regression Procedure:
-
+2. ARIMAX residuals -> detector(single dependent + predictors)
 ```         
 np.random.seed(2)
 
@@ -103,10 +100,9 @@ fig, ax1, ax2 = plot_detection_overlay(
 )
 ```
 
-![](datasets/pTR_unittest.png)
+![](datasets/pTR_unittest2.png)
 
-Covariate Adjustment Procedure:
-
+3. Rolling SVD -> Detector
 ```         
 np.random.seed(3)
 
@@ -149,3 +145,5 @@ fig, ax1, ax2 = plot_detection_overlay(
     threshold=1.3
 )
 ```
+![](datasets/pTR_unittest3.png)
+
