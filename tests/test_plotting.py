@@ -1,7 +1,7 @@
-import matplotlib
-matplotlib.use("Agg")  # headless
-import numpy as np
-import pandas as pd
+#import matplotlib
+#matplotlib.use("Agg")  # headless
+#import numpy as np
+#import pandas as pd
 
 from pTRPred import plot_detection_overlay
 

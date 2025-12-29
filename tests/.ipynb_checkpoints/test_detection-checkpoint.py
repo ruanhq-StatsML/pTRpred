@@ -1,3 +1,6 @@
+import numpy as np
+import pandas as pd
+
 from pTRPred import detect_asvotes, detect_realtime, write_rt_csv
 
 
