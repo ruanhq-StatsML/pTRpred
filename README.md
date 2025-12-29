@@ -1,7 +1,7 @@
 # pTRPred: Python Version of TRPred
 
 
-## Install (editable, for development)
+## Install 
 
 ``` bash
 pip install pTRPred
