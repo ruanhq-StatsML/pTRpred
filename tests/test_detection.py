@@ -1,5 +1,5 @@
-from pTRPred import detect_asvotes, detect_realtime, write_rt_csv
-
+from pTRPred import *
+import pytest
 
 def test_detect_asvotes_basic():
     y = np.linspace(0, 1, 120)

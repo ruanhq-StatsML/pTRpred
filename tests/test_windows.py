@@ -1,9 +1,5 @@
-#import numpy as np
-#import pandas as pd
-#import pytest
-
-#from pTRPred import roll_windows
-
+from pTRPred import *
+import pytest
 
 def test_roll_windows_rolling_end():
     t = np.arange(10)

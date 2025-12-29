@@ -1,9 +1,5 @@
-#import numpy as np
-#import pandas as pd
-#import pytest
-
-#from pTRPred import extract_X, na_handle
-
+from pTRPred import *
+import pytest
 
 def test_extract_X_list_and_regex():
     df = pd.DataFrame({"a": ["1", "2"], "b": [3, 4], "temp1": [1, 2], "temp2": [3, 4]})

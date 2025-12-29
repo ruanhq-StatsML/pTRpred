@@ -1,9 +1,5 @@
-#import matplotlib
-#matplotlib.use("Agg")  # headless
-#import numpy as np
-#import pandas as pd
-
-from pTRPred import plot_detection_overlay
+from pTRPred import *
+import pytest
 
 
 def test_plot_detection_overlay_smoke(tmp_path):
