@@ -13,11 +13,12 @@ proportion = count_fp/total
 ) %>% ungroup()
 
 df_30 <- data.frame(
-    dataset_name = rep(5, battery_cell$)
-	)
+    dataset_name = rep(battery_cell$dataset_name, each = 5)
+)
 for(i in 1:nrow(battery_cell)){
-
+    
 }
+#\scalebox{0.85}{
 
 df1 <- read.csv("10_60_detected_result_whole.csv")
 df2 <- read.csv("10_75_detected_result_whole.csv")
