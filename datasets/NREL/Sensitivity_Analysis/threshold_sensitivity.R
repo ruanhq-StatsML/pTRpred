@@ -12,16 +12,16 @@ total = n(),
 proportion = count_fp/total
 ) %>% ungroup()
 
-df1 <- read.csv("10_60_detected_result_whole.csv")
-df2 <- read.csv("10_75_detected_result_whole.csv")
-df3 <- read.csv("10_100_detected_result_whole.csv")
-df4 <- read.csv("10_125_detected_result_whole.csv")
-df5 <- read.csv("10_150_detected_result_whole.csv")
-df6 <- read.csv("40_60_detected_result_whole.csv")
-df7 <- read.csv("40_75_detected_result_whole.csv")
-df8 <- read.csv("40_100_detected_result_whole.csv")
-df9 <- read.csv("40_125_detected_result_whole.csv")
-df10 <- read.csv("40_150_detected_result_whole.csv")
+df1 <- read.csv("10_60_detected_result_whole copy.csv")
+df2 <- read.csv("10_75_detected_result_whole copy.csv")
+df3 <- read.csv("10_100_detected_result_whole copy.csv")
+df4 <- read.csv("10_125_detected_result_whole copy.csv")
+df5 <- read.csv("10_150_detected_result_whole copy.csv")
+df6 <- read.csv("40_60_detected_result_whole copy.csv")
+df7 <- read.csv("40_75_detected_result_whole copy.csv")
+df8 <- read.csv("40_100_detected_result_whole copy.csv")
+df9 <- read.csv("40_125_detected_result_whole copy.csv")
+df10 <- read.csv("40_150_detected_result_whole copy.csv")
 df0 <- merge(df0, df1, by.x = "dataset_name", by.y = "dataset")
 df0 <- merge(df0, df2, by.x = "dataset_name", by.y = "dataset")
 df0 <- merge(df0, df3, by.x = "dataset_name", by.y = "dataset")
@@ -327,7 +327,7 @@ library(ggplot2)
 df1 <- read.csv("Rec_vis_start10.csv")
 df1$label <- ifelse(df1$label == 1, "Positive", "Negative")
 df1$battery_type = paste(df1$label, df1$battery_type, sep = "_")
-png("thresholding_sensitivity_windowlower_10_Rec.png", width = 600, height = 750)
+png("thresholding_sensitivity_windowlower_10_Generic.png", width = 600, height = 750)
 ggplot(df1, aes(x = threshold, y = value, color = factor(label))) +
   geom_jitter(size = 2.5) +
   scale_color_manual(values = c(
@@ -339,7 +339,7 @@ ggplot(df1, aes(x = threshold, y = value, color = factor(label))) +
   labs(
     x = "Maximal Window Size",
     y = "Maximal Detected Value",
-    title = "Maximal Detected Value vs. Threshold \n - Lower Window Size 10 Rec Battery"
+    title = "Maximal Detected Value vs. Threshold \n - Lower Window Size 10 Generic Lab Battery"
   ) +
     geom_hline(yintercept = 0.3, color = "brown", linewidth = 1.5) + 
      theme(plot.title = element_text(size = 22)) + 
@@ -481,7 +481,7 @@ library(ggplot2)
 df1 <- read.csv("Rec_vis_start30.csv")
 df1$label <- ifelse(df1$label == 1, "Positive", "Negative")
 df1$battery_type = paste(df1$label, df1$battery_type, sep = "_")
-png("thresholding_sensitivity_windowlower_30_Rec.png", width = 600, height = 750)
+png("thresholding_sensitivity_windowlower_30_Generic.png", width = 600, height = 750)
 ggplot(df1, aes(x = threshold, y = value, color = factor(label))) +
   geom_jitter(size = 2.5) +
   scale_color_manual(values = c(
@@ -493,7 +493,7 @@ ggplot(df1, aes(x = threshold, y = value, color = factor(label))) +
   labs(
     x = "Maximal Window Size",
     y = "Maximal Detected Value",
-    title = "Maximal Detected Value vs. Threshold \n - Lower Window Size 30 Rec Battery"
+    title = "Maximal Detected Value vs. Threshold \n - Lower Window Size 30 Generic Lab Battery"
   ) +
     geom_hline(yintercept = 0.3, color = "brown", linewidth = 1.5) + 
      theme(plot.title = element_text(size = 22)) + 
@@ -635,7 +635,7 @@ library(ggplot2)
 df1 <- read.csv("Rec_vis_start40.csv")
 df1$label <- ifelse(df1$label == 1, "Positive", "Negative")
 df1$battery_type = paste(df1$label, df1$battery_type, sep = "_")
-png("thresholding_sensitivity_windowlower_40_Rec.png", width = 600, height = 750)
+png("thresholding_sensitivity_windowlower_40_Generic.png", width = 600, height = 750)
 ggplot(df1, aes(x = threshold, y = value, color = factor(label))) +
   geom_jitter(size = 2.5) +
   scale_color_manual(values = c(
@@ -647,7 +647,7 @@ ggplot(df1, aes(x = threshold, y = value, color = factor(label))) +
   labs(
     x = "Maximal Window Size",
     y = "Maximal Detected Value",
-    title = "Maximal Detected Value vs. Threshold \n - Lower Window Size 40 Rec Battery"
+    title = "Maximal Detected Value vs. Threshold \n - Lower Window Size 40 Generic Labs Battery"
   ) +
     geom_hline(yintercept = 0.3, color = "brown", linewidth = 1.5) + 
      theme(plot.title = element_text(size = 22)) + 
@@ -1392,7 +1392,7 @@ ggplot(df_lco_30, aes(x = threshold, y = value, color = factor(label))) +
 dev.off()
 
 
-png("thresholding_sensitivity_windowlower_30_Rec_SVD.png", width = 600, height = 750)
+png("thresholding_sensitivity_windowlower_30_Generic_SVD.png", width = 600, height = 750)
 ggplot(df_rec_30, aes(x = threshold, y = value, color = factor(label))) +
   geom_jitter(size = 2.5) +
   scale_color_manual(values = c(
@@ -1404,7 +1404,7 @@ ggplot(df_rec_30, aes(x = threshold, y = value, color = factor(label))) +
   labs(
     x = "Maximal Window Size",
     y = "Maximal Detected Value",
-    title = "Maximal Detected Value vs. Threshold SVD Procedure \n - Lower Window Size 30 Rec Battery"
+    title = "Maximal Detected Value vs. Threshold SVD Procedure \n - Lower Window Size 30 Generic Lab Battery"
   ) +
     geom_hline(yintercept = 0.3, color = "brown", linewidth = 1.5) + 
      theme(plot.title = element_text(size = 22)) + 
