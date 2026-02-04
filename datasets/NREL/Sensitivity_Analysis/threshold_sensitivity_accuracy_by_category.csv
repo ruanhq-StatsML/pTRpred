@@ -1,0 +1,92 @@
+"algorithm","battery_category","TP","TN","FP","FN","total","accuracy"
+"conclusion_10_125","Commercial (LCO)",6,0,0,1,7,0.8571
+"conclusion_10_125","Commercial (LFP)",6,1,8,1,16,0.4375
+"conclusion_10_125","Commercial (NMC)",5,0,1,7,13,0.3846
+"conclusion_10_125","Lab/Custom",2,0,0,2,4,0.5
+"conclusion_10_125","Lab/Generic",27,1,2,8,38,0.7368
+"conclusion_10_125","Soteria",0,9,5,1,15,0.6
+"conclusion_10_125","Soteria (Control)",9,0,0,7,16,0.5625
+"conclusion_10_60","Commercial (LCO)",6,0,0,1,7,0.8571
+"conclusion_10_60","Commercial (LFP)",7,0,9,0,16,0.4375
+"conclusion_10_60","Commercial (NMC)",9,0,1,3,13,0.6923
+"conclusion_10_60","Lab/Custom",3,0,0,1,4,0.75
+"conclusion_10_60","Lab/Generic",34,0,3,1,38,0.8947
+"conclusion_10_60","Soteria",0,4,10,1,15,0.2667
+"conclusion_10_60","Soteria (Control)",15,0,0,1,16,0.9375
+"conclusion_10_75","Commercial (LCO)",6,0,0,1,7,0.8571
+"conclusion_10_75","Commercial (LFP)",7,0,9,0,16,0.4375
+"conclusion_10_75","Commercial (NMC)",9,0,1,3,13,0.6923
+"conclusion_10_75","Lab/Custom",3,0,0,1,4,0.75
+"conclusion_10_75","Lab/Generic",34,0,3,1,38,0.8947
+"conclusion_10_75","Soteria",0,5,9,1,15,0.3333
+"conclusion_10_75","Soteria (Control)",15,0,0,1,16,0.9375
+"conclusion_10_150","Commercial (LCO)",3,0,0,4,7,0.4286
+"conclusion_10_150","Commercial (LFP)",5,2,7,2,16,0.4375
+"conclusion_10_150","Commercial (NMC)",5,0,1,7,13,0.3846
+"conclusion_10_150","Lab/Custom",2,0,0,2,4,0.5
+"conclusion_10_150","Lab/Generic",24,1,2,11,38,0.6579
+"conclusion_10_150","Soteria",0,12,2,1,15,0.8
+"conclusion_10_150","Soteria (Control)",7,0,0,9,16,0.4375
+"conclusion_40_60","Commercial (LCO)",7,0,0,0,7,1
+"conclusion_40_60","Commercial (LFP)",7,0,9,0,16,0.4375
+"conclusion_40_60","Commercial (NMC)",9,0,1,3,13,0.6923
+"conclusion_40_60","Lab/Custom",3,0,0,1,4,0.75
+"conclusion_40_60","Lab/Generic",35,0,3,0,38,0.9211
+"conclusion_40_60","Soteria",1,1,13,0,15,0.1333
+"conclusion_40_60","Soteria (Control)",15,0,0,1,16,0.9375
+"conclusion_40_75","Commercial (LCO)",7,0,0,0,7,1
+"conclusion_40_75","Commercial (LFP)",7,0,9,0,16,0.4375
+"conclusion_40_75","Commercial (NMC)",9,0,1,3,13,0.6923
+"conclusion_40_75","Lab/Custom",3,0,0,1,4,0.75
+"conclusion_40_75","Lab/Generic",35,0,3,0,38,0.9211
+"conclusion_40_75","Soteria",0,0,14,1,15,0
+"conclusion_40_75","Soteria (Control)",14,0,0,2,16,0.875
+"conclusion_40_100","Commercial (LCO)",7,0,0,0,7,1
+"conclusion_40_100","Commercial (LFP)",7,0,9,0,16,0.4375
+"conclusion_40_100","Commercial (NMC)",6,0,1,6,13,0.4615
+"conclusion_40_100","Lab/Custom",3,0,0,1,4,0.75
+"conclusion_40_100","Lab/Generic",35,1,2,0,38,0.9474
+"conclusion_40_100","Soteria",0,4,10,1,15,0.2667
+"conclusion_40_100","Soteria (Control)",13,0,0,3,16,0.8125
+"conclusion_40_125","Commercial (LCO)",7,0,0,0,7,1
+"conclusion_40_125","Commercial (LFP)",7,0,9,0,16,0.4375
+"conclusion_40_125","Commercial (NMC)",6,0,1,6,13,0.4615
+"conclusion_40_125","Lab/Custom",3,0,0,1,4,0.75
+"conclusion_40_125","Lab/Generic",35,1,2,0,38,0.9474
+"conclusion_40_125","Soteria",0,5,9,1,15,0.3333
+"conclusion_40_125","Soteria (Control)",12,0,0,4,16,0.75
+"conclusion_40_150","Commercial (LCO)",7,0,0,0,7,1
+"conclusion_40_150","Commercial (LFP)",6,1,8,1,16,0.4375
+"conclusion_40_150","Commercial (NMC)",5,0,1,7,13,0.3846
+"conclusion_40_150","Lab/Custom",2,0,0,2,4,0.5
+"conclusion_40_150","Lab/Generic",27,2,1,8,38,0.7632
+"conclusion_40_150","Soteria",1,7,7,0,15,0.5333
+"conclusion_40_150","Soteria (Control)",6,0,0,10,16,0.375
+"conclusion_30_75","Commercial (LCO)",7,0,0,0,7,1
+"conclusion_30_75","Commercial (LFP)",7,0,9,0,16,0.4375
+"conclusion_30_75","Commercial (NMC)",9,0,1,3,13,0.6923
+"conclusion_30_75","Lab/Custom",3,0,0,1,4,0.75
+"conclusion_30_75","Lab/Generic",35,0,3,0,38,0.9211
+"conclusion_30_75","Soteria",0,1,13,1,15,0.0667
+"conclusion_30_75","Soteria (Control)",14,0,0,2,16,0.875
+"conclusion_30_100","Commercial (LCO)",7,0,0,0,7,1
+"conclusion_30_100","Commercial (LFP)",7,0,9,0,16,0.4375
+"conclusion_30_100","Commercial (NMC)",6,0,1,6,13,0.4615
+"conclusion_30_100","Lab/Custom",3,0,0,1,4,0.75
+"conclusion_30_100","Lab/Generic",35,1,2,0,38,0.9474
+"conclusion_30_100","Soteria",0,5,9,1,15,0.3333
+"conclusion_30_100","Soteria (Control)",12,0,0,4,16,0.75
+"conclusion_30_125","Commercial (LCO)",7,0,0,0,7,1
+"conclusion_30_125","Commercial (LFP)",7,0,9,0,16,0.4375
+"conclusion_30_125","Commercial (NMC)",6,0,1,6,13,0.4615
+"conclusion_30_125","Lab/Custom",2,0,0,2,4,0.5
+"conclusion_30_125","Lab/Generic",33,1,2,2,38,0.8947
+"conclusion_30_125","Soteria",0,7,7,1,15,0.4667
+"conclusion_30_125","Soteria (Control)",12,0,0,4,16,0.75
+"conclusion_30_150","Commercial (LCO)",5,0,0,2,7,0.7143
+"conclusion_30_150","Commercial (LFP)",6,0,9,1,16,0.375
+"conclusion_30_150","Commercial (NMC)",5,0,1,7,13,0.3846
+"conclusion_30_150","Lab/Custom",2,0,0,2,4,0.5
+"conclusion_30_150","Lab/Generic",26,1,2,9,38,0.7105
+"conclusion_30_150","Soteria",0,8,6,1,15,0.5333
+"conclusion_30_150","Soteria (Control)",10,0,0,6,16,0.625

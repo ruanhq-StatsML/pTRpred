@@ -1,0 +1,8 @@
+"battery_category","n_positive","n_negative","n_unknown","n_total"
+"Commercial (LCO)",8,0,1,9
+"Commercial (LFP)",7,9,1,17
+"Commercial (NMC)",12,1,3,16
+"Lab/Custom",4,0,0,4
+"Lab/Generic",35,3,2,40
+"Soteria",1,15,0,16
+"Soteria (Control)",16,0,0,16
