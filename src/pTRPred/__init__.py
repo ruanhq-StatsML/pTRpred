@@ -30,6 +30,10 @@ __all__ = [
     "detect_realtime",
     "write_rt_csv",
     "plot_detection_overlay",
+    "OnlineRealtimeDetector",
+    "OnlineASVotesSliding",
+    "detect_realtime_incremental",
+    "detect_asvotes"    
 ]
 
 __version__ = "0.1.0"
